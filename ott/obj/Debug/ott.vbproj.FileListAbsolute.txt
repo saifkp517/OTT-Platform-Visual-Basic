@@ -1,0 +1,17 @@
+C:\Users\Saif5\source\repos\ott\ott\bin\Debug\Database1.mdf
+C:\Users\Saif5\source\repos\ott\ott\bin\Debug\Database1_log.ldf
+C:\Users\Saif5\source\repos\ott\ott\bin\Debug\ott.exe.config
+C:\Users\Saif5\source\repos\ott\ott\bin\Debug\ott.exe
+C:\Users\Saif5\source\repos\ott\ott\bin\Debug\ott.pdb
+C:\Users\Saif5\source\repos\ott\ott\bin\Debug\ott.xml
+C:\Users\Saif5\source\repos\ott\ott\obj\Debug\ott.vbproj.AssemblyReference.cache
+C:\Users\Saif5\source\repos\ott\ott\obj\Debug\ott.vbproj.SuggestedBindingRedirects.cache
+C:\Users\Saif5\source\repos\ott\ott\obj\Debug\ott.Form1.resources
+C:\Users\Saif5\source\repos\ott\ott\obj\Debug\ott.Form2.resources
+C:\Users\Saif5\source\repos\ott\ott\obj\Debug\ott.Resources.resources
+C:\Users\Saif5\source\repos\ott\ott\obj\Debug\ott.vbproj.GenerateResource.cache
+C:\Users\Saif5\source\repos\ott\ott\obj\Debug\ott.vbproj.CoreCompileInputs.cache
+C:\Users\Saif5\source\repos\ott\ott\obj\Debug\ott.exe
+C:\Users\Saif5\source\repos\ott\ott\obj\Debug\ott.xml
+C:\Users\Saif5\source\repos\ott\ott\obj\Debug\ott.pdb
+C:\Users\Saif5\source\repos\ott\ott\obj\Debug\ott.Form3.resources
