@@ -15,7 +15,7 @@ Public Class Form3
         cmd.CommandType = CommandType.Text
         cmd.CommandText = "select * from Subscriptions where SubName='" & SubName.Text & "' "
 
-        dr = cmd.ExecuteReader()
+        dr = cmd.ExecuteReader
 
         If dr.HasRows Then
             MsgBox("Subscription has already been bought", MsgBoxStyle.Critical)
@@ -31,28 +31,41 @@ Public Class Form3
             cmd2.Connection = con
             cmd2.CommandType = CommandType.Text
             cmd2.CommandText = "select * from Logged"
+            dr2 = cmd2.ExecuteReader
 
-            dr2 = cmd.ExecuteReader()
 
+            If dr2.HasRows Then
 
-            While dr2.Read()
-                If dr2.HasRows Then
-                    Dim Username As New SqlParameter("@Username", SqlDbType.VarChar, 50)
-                    Username.Value = dr2(0)
+                MsgBox("HasRows")
 
-                    cmd = New SqlCommand("INSERT INTO Subscriptions values('" & SubName.Text & "', '" & SubPrice.Text & "', @Username)", con)
+                Dim Username As String
 
-                    If (SubName.Text = "" And SubPrice.Text = "") Then
-                        MsgBox("Please enter the details")
-                    Else
-                        cmd.ExecuteNonQuery()
-                        MsgBox("Successfully added subscription", MsgBoxStyle.Information, "Success")
-                        SubPrice.Clear()
-                        SubName.Clear()
-                    End If
-                    con.Close()
+                While dr2.Read
+
+                    Username = dr2(0)
+                    MsgBox(Username)
+
+                End While
+
+                con.Close()
+                con.Open()
+
+                Dim cmd3 As New SqlCommand("INSERT INTO Subscriptions values('" & SubName.Text & "', '" & SubPrice.Text & "', '" & Username & "')", con)
+
+                If (SubName.Text = "" And SubPrice.Text = "") Then
+                    MsgBox("Please enter the details")
+                Else
+
+                    cmd3.ExecuteNonQuery()
+                    MsgBox("Successfully added subscription", MsgBoxStyle.Information, "Success")
+                    SubPrice.Clear()
+                    SubName.Clear()
                 End If
-            End While
+
+                con.Close()
+            Else
+                MsgBox("no users bitch!, more like cant fetch users dumbass")
+            End If
         End If
         con.Close()
 

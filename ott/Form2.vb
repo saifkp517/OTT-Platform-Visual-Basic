@@ -21,10 +21,7 @@ Public Class Form2
 
         While dr.Read()
             If LoginPassword.Text = dr(0) Then
-                MsgBox("Authenticated")
                 LoggedIn = True
-                Me.Hide()
-                Form3.Show()
             Else
                 MsgBox("Incorrect Username or password")
             End If
@@ -33,8 +30,29 @@ Public Class Form2
         If LoggedIn = True Then
             con.Close()
             con.Open()
-            cmd = New SqlCommand("INSERT INTO Logged values('" & LoginName.Text & "')", con)
-            cmd.ExecuteNonQuery()
+
+            Dim cmd2 As New SqlCommand
+            Dim dr2 As SqlDataReader
+
+            cmd2.Connection = con
+            cmd2.CommandType = CommandType.Text
+            cmd2.CommandText = "select * from Logged where username = '" & LoginName.Text & "' "
+
+            dr2 = cmd2.ExecuteReader
+
+            If dr2.HasRows Then
+                MsgBox("You are already logged in please log out!")
+            Else
+
+                con.Close()
+                con.Open()
+
+                cmd = New SqlCommand("INSERT INTO Logged values('" & LoginName.Text & "')", con)
+                cmd.ExecuteNonQuery()
+                MsgBox("Authenticated!")
+                Me.Hide()
+                Form3.Show()
+            End If
         End If
 
     End Sub
