@@ -22,25 +22,25 @@ Partial Class Form3
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.SubName = New System.Windows.Forms.TextBox()
+        Me.SubPrice = New System.Windows.Forms.TextBox()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'TextBox1
+        'SubName
         '
-        Me.TextBox1.Location = New System.Drawing.Point(160, 98)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 26)
-        Me.TextBox1.TabIndex = 0
+        Me.SubName.Location = New System.Drawing.Point(160, 98)
+        Me.SubName.Name = "SubName"
+        Me.SubName.Size = New System.Drawing.Size(100, 26)
+        Me.SubName.TabIndex = 0
         '
-        'TextBox2
+        'SubPrice
         '
-        Me.TextBox2.Location = New System.Drawing.Point(160, 156)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 26)
-        Me.TextBox2.TabIndex = 1
+        Me.SubPrice.Location = New System.Drawing.Point(160, 156)
+        Me.SubPrice.Name = "SubPrice"
+        Me.SubPrice.Size = New System.Drawing.Size(100, 26)
+        Me.SubPrice.TabIndex = 1
         '
         'ListBox1
         '
@@ -67,8 +67,8 @@ Partial Class Form3
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.ListBox1)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.SubPrice)
+        Me.Controls.Add(Me.SubName)
         Me.Name = "Form3"
         Me.Text = "Form3"
         Me.ResumeLayout(False)
@@ -76,8 +76,8 @@ Partial Class Form3
 
     End Sub
 
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents SubName As TextBox
+    Friend WithEvents SubPrice As TextBox
     Friend WithEvents ListBox1 As ListBox
     Friend WithEvents Button1 As Button
 End Class

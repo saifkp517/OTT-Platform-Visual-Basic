@@ -1,5 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Public Class Form2
+
+
     Private Sub Login_Click(sender As Object, e As EventArgs) Handles Login.Click
 
         Dim LoggedIn As New Boolean
@@ -34,6 +36,25 @@ Public Class Form2
             cmd = New SqlCommand("INSERT INTO Logged values('" & LoginName.Text & "')", con)
             cmd.ExecuteNonQuery()
         End If
+
+    End Sub
+
+    Private Sub Logout_Click(sender As Object, e As EventArgs) Handles Logout.Click
+
+        Dim con2 As New SqlConnection
+        Dim cmd2 As New SqlCommand
+        Dim dr2 As SqlDataReader
+
+        con2.ConnectionString = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Saif5\source\repos\ott\ott\Database1.mdf;Integrated Security=True"
+
+        con2.Open()
+        cmd2.Connection = con2
+        cmd2.CommandType = CommandType.Text
+        cmd2.CommandText = "TRUNCATE TABLE Logged"
+        cmd2.ExecuteNonQuery()
+
+        MsgBox("Logged Out")
+
 
     End Sub
 End Class

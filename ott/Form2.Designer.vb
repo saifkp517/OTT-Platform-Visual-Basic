@@ -25,6 +25,7 @@ Partial Class Form2
         Me.LoginPassword = New System.Windows.Forms.TextBox()
         Me.LoginName = New System.Windows.Forms.TextBox()
         Me.Login = New System.Windows.Forms.Button()
+        Me.Logout = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'LoginPassword
@@ -50,11 +51,21 @@ Partial Class Form2
         Me.Login.Text = "Login"
         Me.Login.UseVisualStyleBackColor = True
         '
+        'Logout
+        '
+        Me.Logout.Location = New System.Drawing.Point(470, 275)
+        Me.Logout.Name = "Logout"
+        Me.Logout.Size = New System.Drawing.Size(100, 32)
+        Me.Logout.TabIndex = 3
+        Me.Logout.Text = "Logout"
+        Me.Logout.UseVisualStyleBackColor = True
+        '
         'Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.Logout)
         Me.Controls.Add(Me.Login)
         Me.Controls.Add(Me.LoginName)
         Me.Controls.Add(Me.LoginPassword)
@@ -68,4 +79,5 @@ Partial Class Form2
     Friend WithEvents LoginPassword As TextBox
     Friend WithEvents LoginName As TextBox
     Friend WithEvents Login As Button
+    Friend WithEvents Logout As Button
 End Class
