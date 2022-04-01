@@ -36,15 +36,10 @@ Public Class Form3
 
             If dr2.HasRows Then
 
-                MsgBox("HasRows")
-
                 Dim Username As String
 
                 While dr2.Read
-
                     Username = dr2(0)
-                    MsgBox(Username)
-
                 End While
 
                 con.Close()
@@ -55,7 +50,6 @@ Public Class Form3
                 If (SubName.Text = "" And SubPrice.Text = "") Then
                     MsgBox("Please enter the details")
                 Else
-
                     cmd3.ExecuteNonQuery()
                     MsgBox("Successfully added subscription", MsgBoxStyle.Information, "Success")
                     SubPrice.Clear()
@@ -72,5 +66,43 @@ Public Class Form3
 
     End Sub
 
+    Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        Dim cmd3 As New SqlCommand
+        Dim con3 As New SqlConnection
+        Dim dr3 As SqlDataReader
+
+        Dim cmd4 As New SqlCommand
+        Dim dr4 As SqlDataReader
+
+        con3.ConnectionString = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Saif5\source\repos\ott\ott\Database1.mdf;Integrated Security=True"
+
+        con3.Open()
+
+        cmd4.Connection = con3
+        cmd4.CommandType = CommandType.Text
+        cmd4.CommandText = "SELECT TOP 1 * FROM Logged ORDER BY username DESC"
+
+        dr4 = cmd4.ExecuteReader
+
+        Dim LoggedUsername As String
+        While dr4.Read
+            LoggedUsername = dr4(0)
+        End While
+
+        dr4.Close()
+
+        cmd3.Connection = con3
+        cmd3.CommandType = CommandType.Text
+        cmd3.CommandText = "select SubName from Subscriptions where Username='" & LoggedUsername & "'"
+        dr3 = cmd3.ExecuteReader
+
+        Do While dr3.Read
+            ListBox1.Items.Add(dr3("SubName"))
+        Loop
+
+        dr3.Close()
+
+    End Sub
 
 End Class
