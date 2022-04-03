@@ -15,3 +15,4 @@ C:\Users\Saif5\source\repos\ott\ott\obj\Debug\ott.exe
 C:\Users\Saif5\source\repos\ott\ott\obj\Debug\ott.xml
 C:\Users\Saif5\source\repos\ott\ott\obj\Debug\ott.pdb
 C:\Users\Saif5\source\repos\ott\ott\obj\Debug\ott.Form3.resources
+C:\Users\Saif5\source\repos\ott\ott\obj\Debug\ott.Form4.resources

@@ -105,4 +105,32 @@ Public Class Form3
 
     End Sub
 
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Dim subcmd As New SqlCommand
+        Dim subdr As SqlDataReader
+        Dim subcon As New SqlConnection
+
+        subcon.ConnectionString = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Saif5\source\repos\ott\ott\Database1.mdf;Integrated Security=True"
+
+        subcon.Open()
+
+        subcmd.Connection = subcon
+        subcmd.CommandType = CommandType.Text
+        subcmd.CommandText = "SELECT * FROM Subscriptions WHERE SubName = '" & ListBox1.SelectedItem & "'"
+
+        subdr = subcmd.ExecuteReader
+
+        While subdr.Read
+            Dim SubName As String = subdr(0)
+            Dim SubPrice As String = subdr(1)
+
+            Form4.Label1.Text = SubName
+            Form4.Label2.Text = SubPrice
+            Form4.Show()
+
+        End While
+
+
+
+    End Sub
 End Class
