@@ -7,7 +7,7 @@ Public Class Form3
         Dim cmd As New SqlCommand
         Dim starts As DateTime = Date.Today
         Dim ends As DateTime = DateTimePicker1.Value
-        Dim result As TimeSpan = starts.Subtract(ends)
+        Dim result As TimeSpan = ends.Subtract(starts)
         Dim days As Integer = result.TotalDays
 
 

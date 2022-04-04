@@ -2,6 +2,13 @@
 Imports System.Data.SqlClient
 
 Public Class Form1
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ComboBox1.Items.Add("Male")
+        ComboBox1.Items.Add("Female")
+        ComboBox1.Items.Add("Other")
+    End Sub
+
     Private Sub Register_Click(sender As Object, e As EventArgs) Handles Register.Click
 
 
@@ -23,7 +30,7 @@ Public Class Form1
         Else
             con.Close()
             con.Open()
-            cmd = New SqlCommand("INSERT INTO Users values('" & Username.Text & "', '" & Password.Text & "')", con)
+            cmd = New SqlCommand("INSERT INTO Users values('" & Username.Text & "', '" & Password.Text & "', '" & ComboBox1.SelectedItem.ToString() & "')", con)
 
             If (Username.Text = "" And Password.Text = "") Then
                 MsgBox("Please enter the details")
@@ -61,4 +68,5 @@ Public Class Form1
         Form2.Show()
         Me.Hide()
     End Sub
+
 End Class
