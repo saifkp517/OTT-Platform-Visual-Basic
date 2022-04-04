@@ -5,6 +5,13 @@ Public Class Form3
 
         Dim con As New SqlConnection
         Dim cmd As New SqlCommand
+        Dim starts As DateTime = Date.Today
+        Dim ends As DateTime = DateTimePicker1.Value
+        Dim result As TimeSpan = starts.Subtract(ends)
+        Dim days As Integer = result.TotalDays
+
+
+
         Dim dr As SqlDataReader
 
 
@@ -45,7 +52,7 @@ Public Class Form3
                 con.Close()
                 con.Open()
 
-                Dim cmd3 As New SqlCommand("INSERT INTO Subscriptions values('" & SubName.Text & "', '" & SubPrice.Text & "', '" & Username & "')", con)
+                Dim cmd3 As New SqlCommand("INSERT INTO Subscriptions values('" & SubName.Text & "', '" & SubPrice.Text & "', '" & Username & "', '" & starts & "', '" & ends & "', '" & days & "')", con)
 
                 If (SubName.Text = "" And SubPrice.Text = "") Then
                     MsgBox("Please enter the details")
@@ -103,6 +110,8 @@ Public Class Form3
 
         dr3.Close()
 
+
+
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
@@ -123,9 +132,15 @@ Public Class Form3
         While subdr.Read
             Dim SubName As String = subdr(0)
             Dim SubPrice As String = subdr(1)
+            Dim Starts As Date = subdr(3)
+            Dim Ends As Date = subdr(4)
+            Dim days As Integer = subdr(5)
 
             Form4.Label1.Text = SubName
             Form4.Label2.Text = SubPrice
+            Form4.Label3.Text = Starts
+            Form4.Label4.Text = Ends
+            Form4.Label5.Text = days
             Form4.Show()
 
         End While

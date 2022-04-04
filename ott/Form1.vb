@@ -31,7 +31,23 @@ Public Class Form1
                 cmd.ExecuteNonQuery()
                 MsgBox("Successfully registered!", MsgBoxStyle.Information, "Success")
                 Me.Hide()
-                Form2.Show()
+
+                con.Close()
+                con.Open()
+
+                Dim cmd2 As New SqlCommand
+                cmd2.Connection = con
+                cmd2.CommandType = CommandType.Text
+                cmd2.CommandText = "TRUNCATE TABLE Logged"
+                cmd2.ExecuteNonQuery()
+
+                Dim cmd3 As New SqlCommand
+                cmd3.Connection = con
+                cmd3.CommandType = CommandType.Text
+                cmd3.CommandText = "INSERT INTO Logged values('" & Username.Text & "')"
+                cmd3.ExecuteNonQuery()
+
+                Form3.Show()
                 Username.Clear()
                 Password.Clear()
             End If

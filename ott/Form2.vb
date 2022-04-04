@@ -41,7 +41,26 @@ Public Class Form2
             dr2 = cmd2.ExecuteReader
 
             If dr2.HasRows Then
-                MsgBox("You are already logged in please log out!")
+
+                con.Close()
+                con.Open()
+
+                Dim cmd3 As New SqlCommand
+                cmd3.Connection = con
+                cmd3.CommandType = CommandType.Text
+                cmd3.CommandText = "TRUNCATE TABLE Logged"
+                cmd3.ExecuteNonQuery()
+
+                con.Close()
+                con.Open()
+
+                Dim cmd4 As New SqlCommand
+                cmd4.Connection = con
+                cmd4.CommandType = CommandType.Text
+                cmd4.CommandText = "INSERT INTO Logged values('" & LoginName.Text & "')"
+                cmd4.ExecuteNonQuery()
+                Form3.Show()
+
             Else
 
                 con.Close()
