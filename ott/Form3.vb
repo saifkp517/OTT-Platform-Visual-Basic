@@ -10,6 +10,9 @@ Public Class Form3
         Dim result As TimeSpan = ends.Subtract(starts)
         Dim days As Integer = result.TotalDays
 
+        Dim cmd5 As New SqlCommand
+        Dim dr5 As SqlDataReader
+
 
 
         Dim dr As SqlDataReader
@@ -37,7 +40,7 @@ Public Class Form3
 
             cmd2.Connection = con
             cmd2.CommandType = CommandType.Text
-            cmd2.CommandText = "select * from Logged"
+            cmd2.CommandText = "SELECT TOP 1 * FROM Logged ORDER BY username DESC"
             dr2 = cmd2.ExecuteReader
 
 
@@ -53,7 +56,6 @@ Public Class Form3
                 con.Open()
 
                 Dim cmd3 As New SqlCommand("INSERT INTO Subscriptions values('" & SubName.Text & "', '" & SubPrice.Text & "', '" & Username & "', '" & starts & "', '" & ends & "', '" & days & "')", con)
-
                 If (SubName.Text = "" And SubPrice.Text = "") Then
                     MsgBox("Please enter the details")
                 Else
@@ -64,8 +66,25 @@ Public Class Form3
                 End If
 
                 con.Close()
+                con.Open()
+
+                cmd5.Connection = con
+                cmd5.CommandType = CommandType.Text
+                cmd5.CommandText = "select SubName from Subscriptions where Username='" & Username & "'"
+                dr5 = cmd5.ExecuteReader
+
+                Dim Subscription As String
+                Do While dr5.Read
+                    Subscription = dr5("SubName")
+                Loop
+
+                ListBox1.Items.Add(Subscription)
+
+                dr5.Close()
+
+                con.Close()
             Else
-                MsgBox("no users bitch!, more like cant fetch users dumbass")
+                MsgBox("no users!")
             End If
         End If
         con.Close()
