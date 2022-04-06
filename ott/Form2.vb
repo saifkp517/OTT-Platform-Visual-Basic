@@ -12,6 +12,12 @@ Public Class Form2
 
         con.ConnectionString = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Saif5\source\repos\ott\ott\Database1.mdf;Integrated Security=True"
 
+        If (LoginName.Text = "admin" And LoginPassword.Text = "admin123") Then
+            MsgBox("Logged in as Admin!", MsgBoxStyle.Information, "Success")
+            Me.Hide()
+            AdminDash.Show()
+        End If
+
         con.Open()
         cmd.Connection = con
         cmd.CommandType = CommandType.Text
@@ -59,7 +65,8 @@ Public Class Form2
                 cmd4.CommandType = CommandType.Text
                 cmd4.CommandText = "INSERT INTO Logged values('" & LoginName.Text & "')"
                 cmd4.ExecuteNonQuery()
-                Form3.Show()
+                UserDash.Show()
+                Me.Hide()
 
             Else
 
@@ -70,7 +77,8 @@ Public Class Form2
                 cmd.ExecuteNonQuery()
                 MsgBox("Authenticated!")
                 Me.Hide()
-                Form3.Show()
+                UserDash.Show()
+                Me.Hide()
             End If
         End If
 
@@ -80,7 +88,6 @@ Public Class Form2
 
         Dim con2 As New SqlConnection
         Dim cmd2 As New SqlCommand
-        Dim dr2 As SqlDataReader
 
         con2.ConnectionString = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Saif5\source\repos\ott\ott\Database1.mdf;Integrated Security=True"
 
@@ -91,9 +98,9 @@ Public Class Form2
         cmd2.ExecuteNonQuery()
 
         MsgBox("Logged Out")
+        Form1.Show()
 
 
     End Sub
-
 
 End Class

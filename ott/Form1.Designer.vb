@@ -35,49 +35,55 @@ Partial Class Form1
         '
         'Username
         '
-        Me.Username.Location = New System.Drawing.Point(231, 62)
+        Me.Username.Location = New System.Drawing.Point(394, 87)
         Me.Username.Name = "Username"
-        Me.Username.Size = New System.Drawing.Size(100, 26)
+        Me.Username.Size = New System.Drawing.Size(183, 26)
         Me.Username.TabIndex = 0
         '
         'Password
         '
-        Me.Password.Location = New System.Drawing.Point(231, 110)
+        Me.Password.Location = New System.Drawing.Point(394, 167)
         Me.Password.Name = "Password"
-        Me.Password.Size = New System.Drawing.Size(100, 26)
+        Me.Password.Size = New System.Drawing.Size(183, 26)
         Me.Password.TabIndex = 1
         '
         'Login
         '
-        Me.Login.Location = New System.Drawing.Point(315, 311)
+        Me.Login.BackColor = System.Drawing.Color.DodgerBlue
+        Me.Login.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Login.Location = New System.Drawing.Point(443, 398)
         Me.Login.Name = "Login"
-        Me.Login.Size = New System.Drawing.Size(100, 30)
+        Me.Login.Size = New System.Drawing.Size(134, 53)
         Me.Login.TabIndex = 2
         Me.Login.Text = "Login"
-        Me.Login.UseVisualStyleBackColor = True
+        Me.Login.UseVisualStyleBackColor = False
         '
         'Register
         '
-        Me.Register.Location = New System.Drawing.Point(231, 215)
+        Me.Register.BackColor = System.Drawing.Color.DodgerBlue
+        Me.Register.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Register.Location = New System.Drawing.Point(394, 314)
         Me.Register.Name = "Register"
-        Me.Register.Size = New System.Drawing.Size(100, 31)
+        Me.Register.Size = New System.Drawing.Size(183, 46)
         Me.Register.TabIndex = 3
         Me.Register.Text = "Register"
-        Me.Register.UseVisualStyleBackColor = True
+        Me.Register.UseVisualStyleBackColor = False
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(111, 68)
+        Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label1.Location = New System.Drawing.Point(203, 90)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(51, 20)
+        Me.Label1.Size = New System.Drawing.Size(83, 20)
         Me.Label1.TabIndex = 4
-        Me.Label1.Text = "Name"
+        Me.Label1.Text = "Username"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(111, 116)
+        Me.Label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label2.Location = New System.Drawing.Point(203, 170)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(78, 20)
         Me.Label2.TabIndex = 5
@@ -86,7 +92,8 @@ Partial Class Form1
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(111, 316)
+        Me.Label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label3.Location = New System.Drawing.Point(208, 414)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(185, 20)
         Me.Label3.TabIndex = 6
@@ -95,25 +102,27 @@ Partial Class Form1
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(231, 159)
+        Me.ComboBox1.Location = New System.Drawing.Point(394, 241)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 28)
+        Me.ComboBox1.Size = New System.Drawing.Size(183, 28)
         Me.ComboBox1.TabIndex = 7
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(115, 166)
+        Me.Label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label4.Location = New System.Drawing.Point(203, 244)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(43, 20)
+        Me.Label4.Size = New System.Drawing.Size(63, 20)
         Me.Label4.TabIndex = 8
-        Me.Label4.Text = "Male"
+        Me.Label4.Text = "Gender"
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.BackColor = System.Drawing.Color.LightSlateGray
+        Me.ClientSize = New System.Drawing.Size(760, 586)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.Label3)
@@ -123,7 +132,10 @@ Partial Class Form1
         Me.Controls.Add(Me.Login)
         Me.Controls.Add(Me.Password)
         Me.Controls.Add(Me.Username)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Location = New System.Drawing.Point(800, 700)
         Me.Name = "Form1"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form1"
         Me.ResumeLayout(False)
         Me.PerformLayout()

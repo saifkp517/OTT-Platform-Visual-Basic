@@ -6,7 +6,6 @@ Public Class Form1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ComboBox1.Items.Add("Male")
         ComboBox1.Items.Add("Female")
-        ComboBox1.Items.Add("Other")
     End Sub
 
     Private Sub Register_Click(sender As Object, e As EventArgs) Handles Register.Click
@@ -54,7 +53,7 @@ Public Class Form1
                 cmd3.CommandText = "INSERT INTO Logged values('" & Username.Text & "')"
                 cmd3.ExecuteNonQuery()
 
-                Form3.Show()
+                AddSub.Show()
                 Username.Clear()
                 Password.Clear()
             End If
