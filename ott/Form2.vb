@@ -98,9 +98,10 @@ Public Class Form2
         cmd2.ExecuteNonQuery()
 
         MsgBox("Logged Out")
+        UserDash.Close()
+        AdminDash.Close()
         Form1.Show()
 
 
     End Sub
-
 End Class

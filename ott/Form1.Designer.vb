@@ -35,23 +35,24 @@ Partial Class Form1
         '
         'Username
         '
-        Me.Username.Location = New System.Drawing.Point(394, 87)
+        Me.Username.Location = New System.Drawing.Point(240, 115)
         Me.Username.Name = "Username"
         Me.Username.Size = New System.Drawing.Size(183, 26)
         Me.Username.TabIndex = 0
         '
         'Password
         '
-        Me.Password.Location = New System.Drawing.Point(394, 167)
+        Me.Password.Location = New System.Drawing.Point(240, 169)
         Me.Password.Name = "Password"
         Me.Password.Size = New System.Drawing.Size(183, 26)
         Me.Password.TabIndex = 1
         '
         'Login
         '
-        Me.Login.BackColor = System.Drawing.Color.DodgerBlue
+        Me.Login.BackColor = System.Drawing.Color.DarkSlateGray
         Me.Login.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Login.Location = New System.Drawing.Point(443, 398)
+        Me.Login.ForeColor = System.Drawing.Color.White
+        Me.Login.Location = New System.Drawing.Point(259, 350)
         Me.Login.Name = "Login"
         Me.Login.Size = New System.Drawing.Size(134, 53)
         Me.Login.TabIndex = 2
@@ -60,9 +61,10 @@ Partial Class Form1
         '
         'Register
         '
-        Me.Register.BackColor = System.Drawing.Color.DodgerBlue
-        Me.Register.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Register.Location = New System.Drawing.Point(394, 314)
+        Me.Register.BackColor = System.Drawing.Color.DarkSlateGray
+        Me.Register.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Register.ForeColor = System.Drawing.Color.White
+        Me.Register.Location = New System.Drawing.Point(240, 276)
         Me.Register.Name = "Register"
         Me.Register.Size = New System.Drawing.Size(183, 46)
         Me.Register.TabIndex = 3
@@ -73,7 +75,7 @@ Partial Class Form1
         '
         Me.Label1.AutoSize = True
         Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label1.Location = New System.Drawing.Point(203, 90)
+        Me.Label1.Location = New System.Drawing.Point(49, 115)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(83, 20)
         Me.Label1.TabIndex = 4
@@ -83,7 +85,7 @@ Partial Class Form1
         '
         Me.Label2.AutoSize = True
         Me.Label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label2.Location = New System.Drawing.Point(203, 170)
+        Me.Label2.Location = New System.Drawing.Point(49, 175)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(78, 20)
         Me.Label2.TabIndex = 5
@@ -93,7 +95,7 @@ Partial Class Form1
         '
         Me.Label3.AutoSize = True
         Me.Label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label3.Location = New System.Drawing.Point(208, 414)
+        Me.Label3.Location = New System.Drawing.Point(49, 366)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(185, 20)
         Me.Label3.TabIndex = 6
@@ -102,7 +104,7 @@ Partial Class Form1
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(394, 241)
+        Me.ComboBox1.Location = New System.Drawing.Point(240, 221)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(183, 28)
         Me.ComboBox1.TabIndex = 7
@@ -111,7 +113,7 @@ Partial Class Form1
         '
         Me.Label4.AutoSize = True
         Me.Label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label4.Location = New System.Drawing.Point(203, 244)
+        Me.Label4.Location = New System.Drawing.Point(49, 224)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(63, 20)
         Me.Label4.TabIndex = 8
@@ -122,7 +124,7 @@ Partial Class Form1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightSlateGray
-        Me.ClientSize = New System.Drawing.Size(760, 586)
+        Me.ClientSize = New System.Drawing.Size(491, 492)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.Label3)

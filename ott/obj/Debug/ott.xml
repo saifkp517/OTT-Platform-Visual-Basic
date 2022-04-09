@@ -22,6 +22,16 @@ ott
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:ott.My.Resources.Resources._85fcefe2_4cd3_4450_803c_5f86e63c604b">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ott.My.Resources.Resources.wallpaper">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="T:ott.Database1DataSet">
 <summary>
 Represents a strongly typed in-memory cache of data.

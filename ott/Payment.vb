@@ -2,7 +2,7 @@
 
 Public Class Payment
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        If (TextBox1.Text = "" And TextBox2.Text = "" And TextBox3.Text = "" And TextBox4.Text = "" And TextBox5.Text) Then
+        If (TextBox1.Text = "" And TextBox2.Text = "" And TextBox3.Text = "" And TextBox4.Text = "") Then
             MsgBox("Please enter all the details", MsgBoxStyle.Critical)
         Else
 
@@ -35,15 +35,32 @@ Public Class Payment
 
                 cmd2.Connection = con
                 cmd2.CommandType = CommandType.Text
-                cmd2.CommandText = "INSERT INTO UserSub values('" & Label7.Text & "', '" & Username & "', '" & TextBox5.Text & "')"
-                cmd2.ExecuteNonQuery()
+
+                Dim Months As Integer
+
+                If (Label8.Text = "Yearly") Then
+                    MsgBox("lmao")
+                    Months = 12
+                    cmd2.CommandText = "INSERT INTO UserSub values('" & Label7.Text & "', '" & Username & "', '" & Months & "')"
+                    cmd2.ExecuteNonQuery()
+                ElseIf (Label8.Text = "Quarterly") Then
+                    Months = 4
+                    cmd2.CommandText = "INSERT INTO UserSub values('" & Label7.Text & "', '" & Username & "', '" & Months & "')"
+                    cmd2.ExecuteNonQuery()
+                ElseIf (Label8.Text = "Monthly") Then
+                    Months = 1
+                    cmd2.CommandText = "INSERT INTO UserSub values('" & Label7.Text & "', '" & Username & "', '" & Months & "')"
+                    cmd2.ExecuteNonQuery()
+                End If
+
 
                 MsgBox("Successfully purchased the subscription", MsgBoxStyle.Information, "Success")
                 UserDash.Show()
+                Me.Hide()
 
 
             Else
-                MsgBox("no users!")
+                    MsgBox("no users!")
             End If
             con.Close()
 

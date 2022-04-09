@@ -3,6 +3,10 @@
 Public Class AddSub
     Private Sub AddSub_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+        ListBox2.Items.Add("Yearly")
+        ListBox2.Items.Add("Quarterly")
+        ListBox2.Items.Add("Monthly")
+
         Dim con As New SqlConnection
         Dim cmd As New SqlCommand
         Dim dr As SqlDataReader
@@ -27,7 +31,10 @@ Public Class AddSub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Payment.Label7.Text = ListBox1.SelectedItem.ToString()
+        Payment.Label8.Text = ListBox2.SelectedItem.ToString()
         Me.Hide()
         Payment.Show()
     End Sub
+
+
 End Class

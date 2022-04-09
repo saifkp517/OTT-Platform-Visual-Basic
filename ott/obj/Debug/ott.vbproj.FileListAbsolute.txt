@@ -14,7 +14,6 @@ C:\Users\Saif5\source\repos\ott\ott\obj\Debug\ott.vbproj.CoreCompileInputs.cache
 C:\Users\Saif5\source\repos\ott\ott\obj\Debug\ott.exe
 C:\Users\Saif5\source\repos\ott\ott\obj\Debug\ott.xml
 C:\Users\Saif5\source\repos\ott\ott\obj\Debug\ott.pdb
-C:\Users\Saif5\source\repos\ott\ott\obj\Debug\ott.Form4.resources
 C:\Users\Saif5\source\repos\ott\ott\obj\Debug\ott.UserDash.resources
 C:\Users\Saif5\source\repos\ott\ott\obj\Debug\ott.AdminDash.resources
 C:\Users\Saif5\source\repos\ott\ott\obj\Debug\ott.exe.config
@@ -31,3 +30,4 @@ C:\Users\Saif5\source\repos\ott\ott\obj\Debug\ott.AddSub.resources
 C:\Users\Saif5\source\repos\ott\ott\obj\Debug\ott.vbproj.CopyComplete
 C:\Users\Saif5\source\repos\ott\ott\obj\Debug\ott.Payment.resources
 C:\Users\Saif5\source\repos\ott\ott\obj\Debug\ott.Reports.resources
+C:\Users\Saif5\source\repos\ott\ott\obj\Debug\ott.About.resources

@@ -36,34 +36,39 @@ Partial Class Subscriptions
         Me.ListBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ListBox1.FormattingEnabled = True
         Me.ListBox1.ItemHeight = 29
-        Me.ListBox1.Location = New System.Drawing.Point(86, 77)
+        Me.ListBox1.Location = New System.Drawing.Point(52, 73)
         Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(496, 323)
+        Me.ListBox1.Size = New System.Drawing.Size(337, 236)
         Me.ListBox1.TabIndex = 0
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(649, 353)
+        Me.Button1.BackColor = System.Drawing.Color.DarkSlateGray
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button1.Location = New System.Drawing.Point(453, 262)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(241, 47)
         Me.Button1.TabIndex = 1
         Me.Button1.Text = "Add Sub"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(560, 456)
+        Me.Button2.BackColor = System.Drawing.Color.DarkSlateGray
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button2.ForeColor = System.Drawing.Color.White
+        Me.Button2.Location = New System.Drawing.Point(320, 365)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(149, 46)
         Me.Button2.TabIndex = 2
         Me.Button2.Text = "Remove Sub"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Button2.UseVisualStyleBackColor = False
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(644, 93)
+        Me.Label1.Location = New System.Drawing.Point(448, 79)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(120, 25)
         Me.Label1.TabIndex = 5
@@ -72,7 +77,7 @@ Partial Class Subscriptions
         'SubName
         '
         Me.SubName.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SubName.Location = New System.Drawing.Point(649, 131)
+        Me.SubName.Location = New System.Drawing.Point(453, 107)
         Me.SubName.Name = "SubName"
         Me.SubName.Size = New System.Drawing.Size(241, 30)
         Me.SubName.TabIndex = 0
@@ -81,7 +86,7 @@ Partial Class Subscriptions
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(644, 187)
+        Me.Label2.Location = New System.Drawing.Point(448, 151)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(56, 25)
         Me.Label2.TabIndex = 6
@@ -90,7 +95,7 @@ Partial Class Subscriptions
         'SubPrice
         '
         Me.SubPrice.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SubPrice.Location = New System.Drawing.Point(649, 233)
+        Me.SubPrice.Location = New System.Drawing.Point(453, 189)
         Me.SubPrice.Name = "SubPrice"
         Me.SubPrice.Size = New System.Drawing.Size(241, 30)
         Me.SubPrice.TabIndex = 1
@@ -100,7 +105,7 @@ Partial Class Subscriptions
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightSlateGray
-        Me.ClientSize = New System.Drawing.Size(939, 582)
+        Me.ClientSize = New System.Drawing.Size(765, 469)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.SubPrice)
         Me.Controls.Add(Me.Button2)

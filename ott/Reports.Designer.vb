@@ -23,9 +23,9 @@ Partial Class Reports
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.UserSubBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Database1DataSet = New ott.Database1DataSet()
         Me.UserSubTableAdapter = New ott.Database1DataSetTableAdapters.UserSubTableAdapter()
@@ -58,13 +58,15 @@ Partial Class Reports
         '
         'DataGridView1
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DataGridView1.BackgroundColor = System.Drawing.Color.LightSlateGray
+        Me.DataGridView1.ColumnHeadersHeight = 34
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.SubName, Me.Username, Me.Months})
-        Me.DataGridView1.Location = New System.Drawing.Point(303, 86)
+        Me.DataGridView1.Location = New System.Drawing.Point(34, 73)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowHeadersWidth = 62
+        Me.DataGridView1.RowHeadersWidth = 30
         Me.DataGridView1.RowTemplate.Height = 28
-        Me.DataGridView1.Size = New System.Drawing.Size(581, 150)
+        Me.DataGridView1.Size = New System.Drawing.Size(434, 315)
         Me.DataGridView1.TabIndex = 0
         '
         'SubName
@@ -72,52 +74,51 @@ Partial Class Reports
         Me.SubName.HeaderText = "SubName"
         Me.SubName.MinimumWidth = 8
         Me.SubName.Name = "SubName"
-        Me.SubName.Width = 150
         '
         'Username
         '
         Me.Username.HeaderText = "Username"
         Me.Username.MinimumWidth = 8
         Me.Username.Name = "Username"
-        Me.Username.Width = 150
         '
         'Months
         '
         Me.Months.HeaderText = "Months"
         Me.Months.MinimumWidth = 8
         Me.Months.Name = "Months"
-        Me.Months.Width = 150
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(299, 50)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(44, 33)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(104, 20)
+        Me.Label1.Size = New System.Drawing.Size(155, 29)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "User Reports"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(303, 299)
+        Me.Label2.Location = New System.Drawing.Point(303, 278)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(0, 20)
         Me.Label2.TabIndex = 2
         '
         'Chart1
         '
-        ChartArea1.Name = "ChartArea1"
-        Me.Chart1.ChartAreas.Add(ChartArea1)
-        Legend1.Name = "Legend1"
-        Me.Chart1.Legends.Add(Legend1)
-        Me.Chart1.Location = New System.Drawing.Point(303, 270)
+        ChartArea2.Name = "ChartArea1"
+        Me.Chart1.ChartAreas.Add(ChartArea2)
+        Legend2.Name = "Legend1"
+        Me.Chart1.Legends.Add(Legend2)
+        Me.Chart1.Location = New System.Drawing.Point(504, 73)
         Me.Chart1.Name = "Chart1"
-        Series1.ChartArea = "ChartArea1"
-        Series1.Legend = "Legend1"
-        Series1.Name = "Series1"
-        Me.Chart1.Series.Add(Series1)
-        Me.Chart1.Size = New System.Drawing.Size(581, 243)
+        Series2.ChartArea = "ChartArea1"
+        Series2.Legend = "Legend1"
+        Series2.Name = "Series1"
+        Me.Chart1.Series.Add(Series2)
+        Me.Chart1.Size = New System.Drawing.Size(397, 315)
         Me.Chart1.TabIndex = 3
         Me.Chart1.Text = "Chart1"
         '
@@ -126,12 +127,14 @@ Partial Class Reports
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightSlateGray
-        Me.ClientSize = New System.Drawing.Size(1214, 611)
+        Me.ClientSize = New System.Drawing.Size(940, 447)
         Me.Controls.Add(Me.Chart1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.DataGridView1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Reports"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form3"
         CType(Me.UserSubBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Database1DataSet, System.ComponentModel.ISupportInitialize).EndInit()

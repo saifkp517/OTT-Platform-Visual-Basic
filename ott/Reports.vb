@@ -52,6 +52,4 @@ Public Class Reports
 
 
     End Sub
-
-
 End Class
