@@ -45,4 +45,31 @@ Public Class Users
         MsgBox("User Has Been deleted!", MsgBoxStyle.Information, "Success")
 
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim con As New SqlConnection
+        Dim cmd As New SqlCommand
+
+        Dim User As String = ListBox1.SelectedItem.ToString()
+
+        con.ConnectionString = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Saif5\source\repos\ott\ott\Database1.mdf;Integrated Security=True"
+
+        con.Open()
+        cmd.Connection = con
+        cmd.CommandType = CommandType.Text
+        cmd.CommandText = "SELECT * FROM UserSub WHERE username='" & ListBox1.SelectedItem.ToString() & "'"
+
+        If (ListBox1.SelectedItems.ToString() <> User) Then
+            ListBox2.Items.Clear()
+        End If
+
+        Dim dr As SqlDataReader
+
+        dr = cmd.ExecuteReader()
+
+        Do While dr.Read()
+            ListBox2.Items.Add(dr(0))
+        Loop
+
+    End Sub
 End Class

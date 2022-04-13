@@ -41,7 +41,7 @@ Partial Class Payment
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(93, 109)
+        Me.Label1.Location = New System.Drawing.Point(93, 62)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(250, 29)
         Me.Label1.TabIndex = 0
@@ -49,7 +49,7 @@ Partial Class Payment
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(93, 205)
+        Me.TextBox1.Location = New System.Drawing.Point(93, 158)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(166, 26)
         Me.TextBox1.TabIndex = 1
@@ -57,7 +57,7 @@ Partial Class Payment
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(93, 182)
+        Me.Label2.Location = New System.Drawing.Point(93, 135)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(111, 20)
         Me.Label2.TabIndex = 2
@@ -66,7 +66,7 @@ Partial Class Payment
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(97, 263)
+        Me.Label3.Location = New System.Drawing.Point(97, 216)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(103, 20)
         Me.Label3.TabIndex = 3
@@ -75,7 +75,7 @@ Partial Class Payment
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(89, 346)
+        Me.Label4.Location = New System.Drawing.Point(89, 299)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(107, 20)
         Me.Label4.TabIndex = 4
@@ -84,7 +84,7 @@ Partial Class Payment
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(239, 346)
+        Me.Label5.Location = New System.Drawing.Point(239, 299)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(42, 20)
         Me.Label5.TabIndex = 5
@@ -92,21 +92,21 @@ Partial Class Payment
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(93, 286)
+        Me.TextBox2.Location = New System.Drawing.Point(93, 239)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(162, 26)
         Me.TextBox2.TabIndex = 6
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(93, 378)
+        Me.TextBox3.Location = New System.Drawing.Point(93, 331)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(100, 26)
         Me.TextBox3.TabIndex = 7
         '
         'TextBox4
         '
-        Me.TextBox4.Location = New System.Drawing.Point(243, 378)
+        Me.TextBox4.Location = New System.Drawing.Point(243, 331)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(100, 26)
         Me.TextBox4.TabIndex = 8
@@ -116,7 +116,7 @@ Partial Class Payment
         Me.Button1.BackColor = System.Drawing.Color.DarkSlateGray
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(93, 449)
+        Me.Button1.Location = New System.Drawing.Point(93, 375)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(162, 50)
         Me.Button1.TabIndex = 9
@@ -126,7 +126,7 @@ Partial Class Payment
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(89, 61)
+        Me.Label6.Location = New System.Drawing.Point(89, 14)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(188, 20)
         Me.Label6.TabIndex = 10
@@ -135,7 +135,7 @@ Partial Class Payment
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(272, 61)
+        Me.Label7.Location = New System.Drawing.Point(272, 14)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(57, 20)
         Me.Label7.TabIndex = 11
@@ -144,7 +144,7 @@ Partial Class Payment
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(335, 61)
+        Me.Label8.Location = New System.Drawing.Point(335, 14)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(57, 20)
         Me.Label8.TabIndex = 12
@@ -155,7 +155,7 @@ Partial Class Payment
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightSlateGray
-        Me.ClientSize = New System.Drawing.Size(489, 604)
+        Me.ClientSize = New System.Drawing.Size(489, 464)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)

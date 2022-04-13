@@ -50,16 +50,16 @@ Public Class Subscriptions
             con.Close()
             con.Open()
 
-            Dim cmd3 As New SqlCommand("INSERT INTO Subscriptions values('" & SubName.Text & "', '" & SubPrice.Text & "')", con)
-            If (SubName.Text = "" And SubPrice.Text = "") Then
-                MsgBox("Please enter the details")
+            Dim cmd3 As New SqlCommand("INSERT INTO Subscriptions values('" & SubName.Text & "', '" & AnnualSubPrice.Text & "', '" & QuarterlySubPrice.Text & "', '" & MonthlySubPrice.Text & "')", con)
+            If (SubName.Text = "" And AnnualSubPrice.Text = "" And QuarterlySubPrice.Text = "" And MonthlySubPrice.Text = "") Then
+                MsgBox("Please enter all the details")
             Else
                 cmd3.ExecuteNonQuery()
                 MsgBox("Successfully added subscription", MsgBoxStyle.Information, "Success")
 
                 ListBox1.Items.Add(SubName.Text)
 
-                SubPrice.Clear()
+                AnnualSubPrice.Clear()
                 SubName.Clear()
 
             End If
@@ -89,4 +89,5 @@ Public Class Subscriptions
 
         MsgBox("User Has Been deleted!", MsgBoxStyle.Information, "Success")
     End Sub
+
 End Class

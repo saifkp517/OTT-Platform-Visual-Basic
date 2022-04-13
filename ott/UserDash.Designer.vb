@@ -26,6 +26,7 @@ Partial Class UserDash
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Button6 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -53,7 +54,7 @@ Partial Class UserDash
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Red
-        Me.Label2.Location = New System.Drawing.Point(1489, 21)
+        Me.Label2.Location = New System.Drawing.Point(1477, 21)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(52, 59)
         Me.Label2.TabIndex = 1
@@ -75,6 +76,7 @@ Partial Class UserDash
         '
         'Panel2
         '
+        Me.Panel2.Controls.Add(Me.Button6)
         Me.Panel2.Controls.Add(Me.Button5)
         Me.Panel2.Controls.Add(Me.Button4)
         Me.Panel2.Controls.Add(Me.Button1)
@@ -85,6 +87,19 @@ Partial Class UserDash
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(197, 745)
         Me.Panel2.TabIndex = 1
+        '
+        'Button6
+        '
+        Me.Button6.BackColor = System.Drawing.Color.DarkSlateGray
+        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button6.ForeColor = System.Drawing.Color.White
+        Me.Button6.Location = New System.Drawing.Point(12, 621)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(166, 90)
+        Me.Button6.TabIndex = 7
+        Me.Button6.Text = "Give Feedback"
+        Me.Button6.UseVisualStyleBackColor = False
         '
         'Button5
         '
@@ -170,6 +185,7 @@ Partial Class UserDash
         Me.Name = "UserDash"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form5"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.Panel2.ResumeLayout(False)
@@ -187,4 +203,5 @@ Partial Class UserDash
     Friend WithEvents TableAdapterManager1 As Database1DataSetTableAdapters.TableAdapterManager
     Friend WithEvents Button5 As Button
     Friend WithEvents Button4 As Button
+    Friend WithEvents Button6 As Button
 End Class

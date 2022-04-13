@@ -6,7 +6,7 @@ Public Class UserDash
         Reports.Hide()
         About.Hide()
         AddSub.Show()
-
+        Feedback.Hide()
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -14,6 +14,7 @@ Public Class UserDash
         AddSub.Hide()
         About.Hide()
         Reports.Hide()
+        Feedback.Hide()
         Form2.Show()
     End Sub
 
@@ -22,6 +23,7 @@ Public Class UserDash
         About.Hide()
         AddSub.Hide()
         Reports.Show()
+        Feedback.Hide()
     End Sub
 
     Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
@@ -42,8 +44,10 @@ Public Class UserDash
 
         MsgBox("Logged Out")
 
+        About.Hide()
         Form1.Show()
         AdminDash.Hide()
+        Feedback.Hide()
         Me.Hide()
     End Sub
 
@@ -52,5 +56,14 @@ Public Class UserDash
         Form2.Hide()
         AddSub.Hide()
         Reports.Hide()
+        Feedback.Hide()
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        About.Hide()
+        Form2.Hide()
+        AddSub.Hide()
+        Reports.Hide()
+        Feedback.Show()
     End Sub
 End Class

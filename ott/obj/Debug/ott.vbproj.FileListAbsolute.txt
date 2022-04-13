@@ -31,3 +31,5 @@ C:\Users\Saif5\source\repos\ott\ott\obj\Debug\ott.vbproj.CopyComplete
 C:\Users\Saif5\source\repos\ott\ott\obj\Debug\ott.Payment.resources
 C:\Users\Saif5\source\repos\ott\ott\obj\Debug\ott.Reports.resources
 C:\Users\Saif5\source\repos\ott\ott\obj\Debug\ott.About.resources
+C:\Users\Saif5\source\repos\ott\ott\obj\Debug\ott.Feedback.resources
+C:\Users\Saif5\source\repos\ott\ott\obj\Debug\ott.Feedbacks.resources

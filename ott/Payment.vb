@@ -27,37 +27,93 @@ Public Class Payment
                     Username = dr(0)
                 End While
 
-                Dim cmd2 As New SqlCommand
-                Dim dr2 As SqlDataReader
+                Dim cmd4 As New SqlCommand
+                Dim dr4 As SqlDataReader
+
+                Dim SubPrice As Integer
 
                 con.Close()
                 con.Open()
 
+                Dim cmd2 As New SqlCommand
                 cmd2.Connection = con
-                cmd2.CommandType = CommandType.Text
+
+                cmd4.Connection = con
 
                 Dim Months As Integer
 
                 If (Label8.Text = "Yearly") Then
-                    MsgBox("lmao")
+
                     Months = 12
-                    cmd2.CommandText = "INSERT INTO UserSub values('" & Label7.Text & "', '" & Username & "', '" & Months & "')"
+
+                    cmd4.CommandText = "SELECT AnnualPrice FROM Subscriptions WHERE SubName = '" & Label7.Text & "'"
+
+                    dr4 = cmd4.ExecuteReader
+
+                    While dr4.Read
+                        SubPrice = dr4(0)
+                    End While
+
+
+                    con.Close()
+                    con.Open()
+
+                    cmd2.CommandText = "INSERT INTO UserSub values('" & Label7.Text & "', '" & Username & "', '" & Months & "', '" & SubPrice & "')"
                     cmd2.ExecuteNonQuery()
+
                 ElseIf (Label8.Text = "Quarterly") Then
+
                     Months = 4
-                    cmd2.CommandText = "INSERT INTO UserSub values('" & Label7.Text & "', '" & Username & "', '" & Months & "')"
+
+                    cmd4.CommandText = "SELECT QuarterlyPrice FROM Subscriptions WHERE SubName = '" & Label7.Text & "'"
+                    dr4 = cmd4.ExecuteReader
+
+                    While dr4.Read
+                        SubPrice = dr4(0)
+                    End While
+
+
+                    con.Close()
+                    con.Open()
+
+                    cmd2.CommandText = "INSERT INTO UserSub values('" & Label7.Text & "', '" & Username & "', '" & Months & "', '" & SubPrice & "')"
                     cmd2.ExecuteNonQuery()
+
+
                 ElseIf (Label8.Text = "Monthly") Then
+
                     Months = 1
-                    cmd2.CommandText = "INSERT INTO UserSub values('" & Label7.Text & "', '" & Username & "', '" & Months & "')"
+
+                    cmd4.CommandText = "SELECT MonthlyPrice FROM Subscriptions WHERE SubName = '" & Label7.Text & "'"
+                    dr4 = cmd4.ExecuteReader
+
+                    While dr4.Read
+                        SubPrice = dr4(0)
+                    End While
+
+
+                    con.Close()
+                    con.Open()
+
+                    cmd2.CommandText = "INSERT INTO UserSub values('" & Label7.Text & "', '" & Username & "', '" & Months & "', '" & SubPrice & "')"
                     cmd2.ExecuteNonQuery()
                 End If
 
 
                 MsgBox("Successfully purchased the subscription", MsgBoxStyle.Information, "Success")
+
+                Dim cmd3 As New SqlCommand
+                Dim dr3 As SqlDataReader
+
+                con.Close()
+                con.Open()
+
+                cmd3.Connection = con
+                cmd3.CommandType = CommandType.Text
+                cmd3.CommandText = "INSERT INTO payment values('" & Label2.Text & "', '" & Label1.Text & "', '" & Label3.Text & "')"
+
                 UserDash.Show()
                 Me.Hide()
-
 
             Else
                     MsgBox("no users!")
