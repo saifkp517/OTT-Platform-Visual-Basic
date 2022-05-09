@@ -33,40 +33,73 @@ Public Class Subscriptions
 
         Dim cmd2 As New SqlCommand
 
+        Dim SubscriptionName As String = SubName.Text
+        Dim AnnualPrice As String = AnnualSubPrice.Text
+        Dim QuarterlyPrice As String = QuarterlySubPrice.Text
+        Dim MonthlyPrice As String = MonthlySubPrice.Text
 
-        con.ConnectionString = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Saif5\source\repos\ott\ott\Database1.mdf;Integrated Security=True"
+        Dim Valid As Boolean
 
-        con.Open()
-        cmd.Connection = con
-        cmd.CommandType = CommandType.Text
-        cmd.CommandText = "select * from Subscriptions where SubName='" & SubName.Text & "' "
+        Dim ret1 As Boolean = IsNumeric(SubscriptionName)
+        Dim ret2 As Boolean = IsNumeric(AnnualPrice)
+        Dim ret3 As Boolean = IsNumeric(QuarterlyPrice)
+        Dim ret4 As Boolean = IsNumeric(MonthlyPrice)
 
-        dr = cmd.ExecuteReader
-
-        If dr.HasRows Then
-            MsgBox("Subscription is already present", MsgBoxStyle.Critical)
-            con.Close()
+        If (AnnualSubPrice.Text = "" Or QuarterlySubPrice.Text = "" Or MonthlySubPrice.Text = "" Or SubName.Text = "") Then
+            MsgBox("please enter all the values")
         Else
-            con.Close()
-            con.Open()
-
-            Dim cmd3 As New SqlCommand("INSERT INTO Subscriptions values('" & SubName.Text & "', '" & AnnualSubPrice.Text & "', '" & QuarterlySubPrice.Text & "', '" & MonthlySubPrice.Text & "')", con)
-            If (SubName.Text = "" And AnnualSubPrice.Text = "" And QuarterlySubPrice.Text = "" And MonthlySubPrice.Text = "") Then
-                MsgBox("Please enter all the details")
+            If (ret1 = True) Then
+                MsgBox("cant enter numbers")
+                Valid = False
+            ElseIf (ret2 = False) Then
+                MsgBox("enter only numbers")
+                Valid = False
+            ElseIf (ret3 = False) Then
+                MsgBox("enter only numbers")
+                Valid = False
+            ElseIf (ret4 = False) Then
+                MsgBox("enter only numbers")
+                Valid = False
             Else
-                cmd3.ExecuteNonQuery()
-                MsgBox("Successfully added subscription", MsgBoxStyle.Information, "Success")
-
-                ListBox1.Items.Add(SubName.Text)
-
-                AnnualSubPrice.Clear()
-                SubName.Clear()
-
+                Valid = True
             End If
+        End If
 
+        If Valid = True Then
+            con.ConnectionString = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Saif5\source\repos\ott\ott\Database1.mdf;Integrated Security=True"
+
+            con.Open()
+            cmd.Connection = con
+            cmd.CommandType = CommandType.Text
+            cmd.CommandText = "select * from Subscriptions where SubName='" & SubName.Text & "' "
+
+            dr = cmd.ExecuteReader
+
+            If dr.HasRows Then
+                MsgBox("Subscription is already present", MsgBoxStyle.Critical)
+                con.Close()
+            Else
+                con.Close()
+                con.Open()
+
+                Dim cmd3 As New SqlCommand("INSERT INTO Subscriptions values('" & SubName.Text & "', '" & AnnualSubPrice.Text & "', '" & QuarterlySubPrice.Text & "', '" & MonthlySubPrice.Text & "')", con)
+                If (SubName.Text = "" And AnnualSubPrice.Text = "" And QuarterlySubPrice.Text = "" And MonthlySubPrice.Text = "") Then
+                    MsgBox("Please enter all the details")
+                Else
+                    cmd3.ExecuteNonQuery()
+                    MsgBox("Successfully added subscription", MsgBoxStyle.Information, "Success")
+
+                    ListBox1.Items.Add(SubName.Text)
+
+                    AnnualSubPrice.Clear()
+                    SubName.Clear()
+
+                End If
+
+                con.Close()
+            End If
             con.Close()
         End If
-        con.Close()
 
     End Sub
 
@@ -90,4 +123,7 @@ Public Class Subscriptions
         MsgBox("User Has Been deleted!", MsgBoxStyle.Information, "Success")
     End Sub
 
+    Private Sub ListBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListBox1.SelectedIndexChanged
+
+    End Sub
 End Class

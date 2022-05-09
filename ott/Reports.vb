@@ -72,7 +72,7 @@ Public Class Reports
 
 
         Else
-            MsgBox("no users!")
+            MsgBox("no users currently logged in, please login and try again!", MsgBoxStyle.Critical)
         End If
 
         dr.Close()

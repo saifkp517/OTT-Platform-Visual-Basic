@@ -5,6 +5,9 @@ Public Class Form2
     Private Sub Login_Click(sender As Object, e As EventArgs) Handles Login.Click
 
         Dim LoggedIn As New Boolean
+        Dim Email As String
+
+        Email = LoginName.Text
 
         Dim con As New SqlConnection
         Dim cmd As New SqlCommand
@@ -16,6 +19,8 @@ Public Class Form2
             MsgBox("Logged in as Admin!", MsgBoxStyle.Information, "Success")
             Me.Hide()
             AdminDash.Show()
+        ElseIf Not Email.Contains("@gmail.com") Then
+            MsgBox("enter a valid email")
         End If
 
         con.Open()

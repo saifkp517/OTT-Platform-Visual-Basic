@@ -23,12 +23,12 @@ Partial Class Reports
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim ChartArea3 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend3 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series3 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim ChartArea4 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend4 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series4 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.UserSubBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Database1DataSet = New ott.Database1DataSet()
         Me.UserSubTableAdapter = New ott.Database1DataSetTableAdapters.UserSubTableAdapter()
@@ -119,33 +119,33 @@ Partial Class Reports
         '
         'Chart1
         '
-        ChartArea3.Name = "ChartArea1"
-        Me.Chart1.ChartAreas.Add(ChartArea3)
-        Legend3.Name = "Legend1"
-        Me.Chart1.Legends.Add(Legend3)
+        ChartArea1.Name = "ChartArea1"
+        Me.Chart1.ChartAreas.Add(ChartArea1)
+        Legend1.Name = "Legend1"
+        Me.Chart1.Legends.Add(Legend1)
         Me.Chart1.Location = New System.Drawing.Point(479, 233)
         Me.Chart1.Name = "Chart1"
-        Series3.ChartArea = "ChartArea1"
-        Series3.Legend = "Legend1"
-        Series3.Name = "Series1"
-        Me.Chart1.Series.Add(Series3)
+        Series1.ChartArea = "ChartArea1"
+        Series1.Legend = "Legend1"
+        Series1.Name = "Series1"
+        Me.Chart1.Series.Add(Series1)
         Me.Chart1.Size = New System.Drawing.Size(398, 186)
         Me.Chart1.TabIndex = 3
         Me.Chart1.Text = "Chart1"
         '
         'Chart2
         '
-        ChartArea4.Name = "ChartArea1"
-        Me.Chart2.ChartAreas.Add(ChartArea4)
-        Legend4.Name = "Legend1"
-        Me.Chart2.Legends.Add(Legend4)
+        ChartArea2.Name = "ChartArea1"
+        Me.Chart2.ChartAreas.Add(ChartArea2)
+        Legend2.Name = "Legend1"
+        Me.Chart2.Legends.Add(Legend2)
         Me.Chart2.Location = New System.Drawing.Point(479, 425)
         Me.Chart2.Name = "Chart2"
-        Series4.ChartArea = "ChartArea1"
-        Series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut
-        Series4.Legend = "Legend1"
-        Series4.Name = "Series1"
-        Me.Chart2.Series.Add(Series4)
+        Series2.ChartArea = "ChartArea1"
+        Series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut
+        Series2.Legend = "Legend1"
+        Series2.Name = "Series1"
+        Me.Chart2.Series.Add(Series2)
         Me.Chart2.Size = New System.Drawing.Size(398, 199)
         Me.Chart2.TabIndex = 4
         Me.Chart2.Text = "Chart2"
@@ -157,9 +157,9 @@ Partial Class Reports
         Me.Label3.ForeColor = System.Drawing.Color.White
         Me.Label3.Location = New System.Drawing.Point(18, 711)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(174, 29)
+        Me.Label3.Size = New System.Drawing.Size(208, 29)
         Me.Label3.TabIndex = 5
-        Me.Label3.Text = "Total Expense:"
+        Me.Label3.Text = "Total Expense -/ ₹"
         '
         'Label4
         '
@@ -185,7 +185,7 @@ Partial Class Reports
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(357, 134)
+        Me.Label5.Location = New System.Drawing.Point(354, 153)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(70, 25)
         Me.Label5.TabIndex = 8
@@ -196,7 +196,7 @@ Partial Class Reports
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(433, 134)
+        Me.Label6.Location = New System.Drawing.Point(430, 153)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(77, 25)
         Me.Label6.TabIndex = 9

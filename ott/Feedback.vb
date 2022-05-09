@@ -3,10 +3,6 @@
 Public Class Feedback
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
-        Dim allLines() As String = RichTextBox1.Lines
-        For lineCounter = 0 To allLines.GetUpperBound(0)
-
-        Next
 
         Dim con As New SqlConnection
         Dim cmd As New SqlCommand
@@ -37,7 +33,7 @@ Public Class Feedback
 
             cmd2.Connection = con
             cmd2.CommandType = CommandType.Text
-            cmd2.CommandText = "INSERT INTO Feedback VALUES('" & Username & "', '" & allLines(0) & "')"
+            cmd2.CommandText = "INSERT INTO Feedback VALUES('" & Username & "', '" & RichTextBox1.Text & "')"
 
             cmd2.ExecuteReader()
             MsgBox("Message sent to admin")
